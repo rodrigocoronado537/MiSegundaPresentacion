@@ -1,0 +1,68 @@
+.botones{
+    background-color: #945D31;
+    border: black 5px solid;
+    padding-top: 39px;
+    padding-bottom: 186px;
+    
+ }
+ button{
+    height: 50px;
+    width: 200px;
+ }
+ .imagen{
+    background-image: url('https://whackahack.com/foro/img/28508/543/4325.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+    background-color: black;
+ 
+ }
+ 
+ .container {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+ }
+ 
+ .container img {
+    width: 200px;
+ }
+ 
+ .container2 {
+    width: auto;
+    height: auto;
+    display:flex;
+    justify-content: end;
+    align-items: end;
+ }
+ 
+ .container2 img {
+    width: auto;
+    height: auto;
+ }
+ .imagepoke{
+   width: 110px;
+   height: 85px;
+ }
+ .imagepoke2{
+   width: 110px;
+   height: 85px;
+ }
+ .imagepoke3{
+   width: 110px;
+   height: 85px;
+ } 
+ .imagepoke4{
+   width: 110px;
+   height: 85px;
+ } 
+ .imagepokeGray{
+   -webkit-filter: grayscale();
+   filter: grayscale();
+ }
+ .imagepokeGray2{
+    -webkit-filter: grayscale();
+   filter: grayscale();
+ }
