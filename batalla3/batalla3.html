@@ -10,7 +10,7 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="Batalla2.css" />
+    <link rel="stylesheet" href="batalla3/batalla3.css" />
   </head>
   <body>
     <section>
@@ -19,32 +19,29 @@
           <img
             src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
             alt=""
-            class="imagepoke imagepokeGray"
+            class="imagepoke"
             id="pokeleft"
           />
           <img
             src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
             alt=""
-            class="imagepoke2 "
+            class="imagepoke2"
             id="pokeleft2"
-          /><img
-          src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
-          alt=""
-          class="imagepoke2 "
-          id="pokeleft3"
-        />
-
+          />
+<!-- DALE LA VUELA A LA IMAGEN MARCO!!!!!! -->
           <div class="p-2 col container2">
             <img
-              src="pokes.img/vicni.gif"
+         
+              src="pokes.img/scyther.gif"
               class="rounded float-start"
               alt="..."
-              style="width: 30rem"
+              style="width: 25rem"
             />
+            
           </div>
           <div class="p-2 col container">
             <img
-              src="pokes.img/4o45 (1).gif"
+              src="pokes.img/cubone1.gif"
               class="rounded float-end"
               alt="..."
               style="width: 30rem"
@@ -57,15 +54,10 @@
             id="pokeright2"
           />
           <img
-            src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
-            alt=""
-            class="imagepoke3"
-            id="pokeright3"
-          />
-          <img
           src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
-          alt="" class="imagepoke4 " id="pokeright"
+          alt="" class="imagepoke4 imagepokeGray2" id="pokeright"
         </div>
+        
       </div>
       <div class="row">
         <div class="col" id="vidapokeimaginario2">
@@ -102,7 +94,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="GolpeCuerpo"
-                onclick="AtaqueRápido(); "disabled
+                onclick="AtaqueRápido(); "
               >
                 Ataque Rápido
               </button>
@@ -110,7 +102,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="Arremeter"
-                onclick="dobleFilo(); "disabled
+                onclick="dobleFilo(); "
               >
                 doble Filo
               </button>
@@ -118,7 +110,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="CuchilladaGarra"
-                onclick="Calcinación();"disabled
+                onclick="Calcinación();"
               >
                 Calcinación
               </button>
@@ -126,7 +118,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="Cuchillada"
-                onclick="BombaIgnea(); "disabled
+                onclick="BombaIgnea();"
               >
                 Bomba Ignea
               </button>
@@ -168,14 +160,10 @@
               </button>
             </div>
           </div>
-          <button onclick="document.location='Batalla3.html'" id="batalla3" disabled >proxima batalla</button>
-        </div><link rel="stylesheet" href="batalla3.html">
         </div>
       </div>
-      
     </section>
   </body>
-  
   <script>
     let poke = {
       vida: 100,
@@ -208,7 +196,6 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("pokeright2").classList.add("imagepokeGray2");
-        document.getElementById('batalla3').disabled=false
         
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
@@ -254,7 +241,7 @@
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
-        document.getElementById('batalla3').disabled=false
+        
         document.getElementById("pokeright2").classList.add("imagepokeGray2");
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
@@ -301,8 +288,9 @@
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("pokeright2").classList.add("imagepokeGray2");
+        document.getElementById("pokeright").classList.add("imagepokeGray2")
         document.getElementById("GolpeCuerpo").disabled = true;
-        document.getElementById('batalla3').disabled=false
+        
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
         
@@ -354,7 +342,8 @@
         document.getElementById("Jalon").disabled = true;
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("pokeright2").classList.add("imagepokeGray2");
-        document.getElementById('batalla3').disabled=false
+        document.getElementById("pokeright").classList.add("imagepokeGray2");
+        
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -397,7 +386,8 @@
       // alert de vida
 
       if (poke2.vida <= 0) {alert("se acabo  gano Venasour");
-        document.getElementById("pokeleft2").classList.add("imagepokeGray");     
+        document.getElementById("pokeleft2").classList.add("imagepokeGray");
+        document.getElementById("pokeleft").classList.add("imagepokeGray");
         document.getElementById("placaJalonje2").disabled = true;
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -406,7 +396,7 @@
         document.getElementById("Perforador").disabled = true;
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
-        document.getElementById('batalla3').disabled=false
+        
       } else if (poke2.vida <= 55) {
         document.getElementById("vidapokeimaginario2").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -447,8 +437,8 @@
       // alert de vida
 
       if (poke2.vida <= 0) {alert("se acabo  gano Venasour");
-
         document.getElementById("pokeleft2").classList.add("imagepokeGray");
+        document.getElementById("pokeleft").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -457,7 +447,7 @@
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("placaJalonje2").disabled = true;
-        document.getElementById('batalla3').disabled=false
+        
       } else if (poke2.vida <= 55) {
         document.getElementById("vidapokeimaginario2").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -495,7 +485,6 @@
       document.getElementById("Jalon").disabled = true;
       // alert de vida
       if (poke2.vida <= 0) {alert("se acabo gano Venasour");
-        document.getElementById("pokeleft2").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -503,8 +492,10 @@
         document.getElementById("Perforador").disabled = true;
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
+        document.getElementById("placaJalonje2").disabled = true;
+        document.getElementById("pokeleft").classList.add("imagepokeGray");
+        document.getElementById("pokeleft2").classList.add("imagepokeGray");
         
-        document.getElementById('batalla3').disabled=false
       } else if (poke2.vida <= 55) {
         document.getElementById("vidapokeimaginario2").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -543,7 +534,8 @@
       // alert de vida
       if (poke2.vida <= 0) {
         alert("se acabo gano venasour");
-        document.getElementById("pokeleft2").classList.add("imagepokeGray");        
+        document.getElementById("pokeleft").classList.add("imagepokeGray");
+        document.getElementById("pokeleft2").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -552,7 +544,6 @@
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("placaJalonje2").disabled = true;
-        document.getElementById('batalla3').disabled=false
       } else if (poke2.vida <= 55) {
         document.getElementById("vidapokeimaginario2").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
