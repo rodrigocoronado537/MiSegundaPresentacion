@@ -78,3 +78,23 @@ button{
    margin-left: 1870px;
 
 }
+.textoAtaque{
+   color: white;
+   background-color: #945D31;
+   justify-content: center;
+   text-align: center;
+  display:block ;
+  place-items: center;
+  font-family: monospace;
+  white-space: nowrap;
+  width: 96ch;
+  animation: escribiendo 2s steps(96);
+  overflow: hidden;
+ 
+}
+
+@keyframes escribiendo{
+   from{
+      width: 0;
+   }
+}
