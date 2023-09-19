@@ -153,7 +153,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="CuchilladaGarra"
-                onclick="placaj();"
+                onclick="CuchilladaGarra();"
               >
                 Cuchillada Garra
               </button>
@@ -161,7 +161,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="Cuchillada"
-                onclick="placaj();"
+                onclick="Cuchillada();"
               >
                 Cuchillada
               </button>
@@ -174,7 +174,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="Perforador"
-                onclick="ataqueHoja(); "
+                onclick="Perforador(); "
               >
                 Perforador
               </button>
@@ -182,7 +182,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="SacudidaCola"
-                onclick="ataqueHoja(); "
+                onclick="SacudidaCola(); "
               >
                 Sacudida cola
               </button>
@@ -190,7 +190,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="RoceEnvenenado"
-                onclick="placaj1();"
+                onclick="RoceEnvenenado();"
               >
                 Roce envenenado
               </button>
@@ -198,7 +198,7 @@
                 class="badge text-bg"
                 style="color: black"
                 id="Jalon"
-                onclick="jalon();"
+                onclick="Jalon();"
               >
                 Jalon
               </button>
@@ -214,16 +214,15 @@
       vida: 100,
     };
     let GolpeCuerpo = () => {
-      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo golpe cuerpo </h1></div>'
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo golpe cuerpo, no es efectivo </h1></div>'
       poke.vida = poke.vida - 10;
-     
+      document.getElementById("vidapokeimaginario").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
         poke.vida +
         '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-success" style="width:' +
         poke.vida +
         '%"></div></div>';
 
-      alert("no es efectivo");
       document.getElementById("GolpeCuerpo").disabled = true;
       document.getElementById("Arremeter").disabled = true;
       document.getElementById("CuchilladaGarra").disabled = true;
@@ -243,7 +242,7 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("Batalla2Pugly").disabled = false;
-        alert("se acabo  gano Purugly");
+       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -262,7 +261,7 @@
       }
     };
     let Arremeter = () => {
-      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo arremeter </h1></div>'
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo arremeter, no es efectivo </h1></div>'
       poke.vida = poke.vida - 10;
       document.getElementById("vidapokeimaginario").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
@@ -270,7 +269,6 @@
         '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-success" style="width:' +
         poke.vida +
         '%"></div></div>';
-      alert("no es efectivo");
       document.getElementById("GolpeCuerpo").disabled = true;
       document.getElementById("Arremeter").disabled = true;
       document.getElementById("CuchilladaGarra").disabled = true;
@@ -290,7 +288,7 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("Batalla2Pugly").disabled = false;
-        alert("se acabo  gano Purugly");
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -308,8 +306,8 @@
           '%"></div></div>';
       }
     };
-
-    let placaj = () => {
+    let CuchilladaGarra = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo cuchillada garra, es super efectivo </h1></div>'
       poke.vida = poke.vida - 20;
       document.getElementById("vidapokeimaginario").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
@@ -317,7 +315,6 @@
         '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-success" style="width:' +
         poke.vida +
         '%"></div></div>';
-      alert("es super efectivo");
       document.getElementById("GolpeCuerpo").disabled = true;
       document.getElementById("Arremeter").disabled = true;
       document.getElementById("CuchilladaGarra").disabled = true;
@@ -340,7 +337,56 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("Batalla2Pugly").disabled = false;
-        alert("se acabo gano Purugly");
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
+      } else if (poke.vida <= 55) {
+        document.getElementById("vidapokeimaginario").innerHTML =
+          '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
+          poke.vida +
+          '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-warning" style="width:' +
+          poke.vida +
+          '%"></div></div>';
+      }
+      if (poke.vida <= 25) {
+        document.getElementById("vidapokeimaginario").innerHTML =
+          '<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="' +
+          poke.vida +
+          '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-danger" style="width:' +
+          poke.vida +
+          '%"></div></div>';
+      }
+    };
+    let Cuchillada = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo cuchillada, es super efectivo </h1></div>'
+      poke.vida = poke.vida - 20;
+      document.getElementById("vidapokeimaginario").innerHTML =
+        '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
+        poke.vida +
+        '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-success" style="width:' +
+        poke.vida +
+        '%"></div></div>';
+      document.getElementById("GolpeCuerpo").disabled = true;
+      document.getElementById("Arremeter").disabled = true;
+      document.getElementById("CuchilladaGarra").disabled = true;
+      document.getElementById("Cuchillada").disabled = true;
+      // division
+      document.getElementById("Perforador").disabled = false;
+      document.getElementById("SacudidaCola").disabled = false;
+      document.getElementById("RoceEnvenenado").disabled = false;
+      document.getElementById("Jalon").disabled = false;
+      // aqui va para q paresca el texto
+      // alert de vida
+      if (poke.vida <= 0) {
+        document.getElementById("pokeright").classList.add("imagepokeGray2");
+        document.getElementById("GolpeCuerpo").disabled = true;
+        document.getElementById("Arremeter").disabled = true;
+        document.getElementById("CuchilladaGarra").disabled = true;
+        document.getElementById("Cuchillada").disabled = true;
+        document.getElementById("Perforador").disabled = true;
+        document.getElementById("SacudidaCola").disabled = true;
+        document.getElementById("RoceEnvenenado").disabled = true;
+        document.getElementById("Jalon").disabled = true;
+        document.getElementById("Batalla2Pugly").disabled = false;
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -362,7 +408,9 @@
     let poke2 = {
       vida: 100,
     };
-    let ataqueHoja = () => {
+    let Perforador = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo perforador</h1></div>'
+
       poke2.vida = poke2.vida - 15;
       document.getElementById("vidapokeimaginario2").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
@@ -384,7 +432,8 @@
       // alert de vida
 
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
-        alert("se acabo  gano Nidoking");
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
+
         document.getElementById("pokeleft").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -394,7 +443,59 @@
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("placaJalonje2").disabled = true;
-        
+
+      } else if (poke2.vida <= 55) {
+        document.getElementById("vidapokeimaginario2").innerHTML =
+          '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
+          poke2.vida +
+          '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-warning" style="width:' +
+          poke2.vida +
+          '%"></div></div>';
+      }
+      if (poke2.vida <= 25) {
+        document.getElementById("vidapokeimaginario2").innerHTML =
+          '<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="' +
+          poke2.vida +
+          '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-danger" style="width:' +
+          poke2.vida +
+          '%"></div></div>';
+      }
+    };
+    let SacudidaCola = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo sacudida cola</h1></div>'
+      poke2.vida = poke2.vida - 15;
+      document.getElementById("vidapokeimaginario2").innerHTML =
+        '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
+        poke2.vida +
+        '" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar bg-success" style="width:' +
+        poke2.vida +
+        '%"></div></div>';
+
+      document.getElementById("GolpeCuerpo").disabled = false;
+      document.getElementById("Arremeter").disabled = false;
+      document.getElementById("CuchilladaGarra").disabled = false;
+      document.getElementById("Cuchillada").disabled = false;
+      // division
+      document.getElementById("Perforador").disabled = true;
+      document.getElementById("SacudidaCola").disabled = true;
+      document.getElementById("RoceEnvenenado").disabled = true;
+      document.getElementById("Jalon").disabled = true;
+      // aqui va para q paresca el texto
+      // alert de vida
+
+      if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
+               document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
+
+        document.getElementById("pokeleft").classList.add("imagepokeGray");
+        document.getElementById("GolpeCuerpo").disabled = true;
+        document.getElementById("Arremeter").disabled = true;
+        document.getElementById("CuchilladaGarra").disabled = true;
+        document.getElementById("Cuchillada").disabled = true;
+        document.getElementById("Perforador").disabled = true;
+        document.getElementById("SacudidaCola").disabled = true;
+        document.getElementById("RoceEnvenenado").disabled = true;
+        document.getElementById("placaJalonje2").disabled = true;
+
       } else if (poke2.vida <= 55) {
         document.getElementById("vidapokeimaginario2").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -413,7 +514,9 @@
       }
     };
 
-    let placaj1 = () => {
+    let RoceEnvenenado = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo roce envenenado, es super efectivo</h1></div>'
+
       poke2.vida = poke2.vida - 20;
 
       document.getElementById("vidapokeimaginario2").innerHTML =
@@ -433,7 +536,8 @@
       document.getElementById("Jalon").disabled = true;
       // alert de vida
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
-        alert("se acabo gano Nidoking");
+               document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
+
         document.getElementById("pokeleft").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -443,7 +547,7 @@
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("placaJalonje2").disabled = true;
-        
+
       } else if (poke2.vida <= 55) {
         document.getElementById("vidapokeimaginario2").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -461,7 +565,8 @@
           '%"></div></div>';
       }
     };
-    let jalon = () => {
+    let Jalon = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo jalon, no es efectivo</h1></div>'
       poke2.vida = poke2.vida - 10;
 
       document.getElementById("vidapokeimaginario2").innerHTML =
@@ -481,7 +586,8 @@
       document.getElementById("Jalon").disabled = true;
       // alert de vida
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
-        alert("se acabo gano Nidoking");
+              document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
+
         document.getElementById("pokeleft").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -491,7 +597,7 @@
         document.getElementById("SacudidaCola").disabled = true;
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("placaJalonje2").disabled = true;
-        
+
       } else if (poke2.vida <= 55) {
         document.getElementById("vidapokeimaginario2").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +

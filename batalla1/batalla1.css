@@ -88,7 +88,7 @@ button{
   font-family: monospace;
   white-space: nowrap;
   width: 96ch;
-  animation: escribiendo 2s steps(96);
+  animation: escribiendo 2.5s steps(100);
   overflow: hidden;
  
 }
