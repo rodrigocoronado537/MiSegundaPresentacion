@@ -16,10 +16,12 @@ button{
    background-repeat: no-repeat; /* Do not repeat the image */
    background-size: contain;
    background-color: black;
+ 
 
 }
 
 .container {
+   
    width: 200px;
    height: 300px;
    display: flex;
@@ -34,12 +36,13 @@ button{
 .container2 {
    width: auto;
    height: auto;
-   display: flex;
+   display:flex;
    justify-content: end;
    align-items: end;
 }
 
 .container2 img {
+   margin-top: 100PX;
    width: auto;
    height: auto;
 }
@@ -73,9 +76,10 @@ button{
    
 }
 .buttonRightPokeBall{
-   width: 250px;
+   width: 265px;
    height: 80px;
-   margin-left: 1870px;
+   margin-left: 2112px;
+   
 
 }
 .textoAtaque{
@@ -87,7 +91,7 @@ button{
   place-items: center;
   font-family: monospace;
   white-space: nowrap;
-  width: 95.5ch;
+  width: 100ch;
   animation: escribiendo 2.5s steps(100);
   overflow: hidden;
  
