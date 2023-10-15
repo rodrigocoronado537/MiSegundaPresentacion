@@ -2,9 +2,8 @@
 .botones{
    background-color: #945D31;
    border: black 5px solid;
-   padding-top: 39px;
-   padding-bottom: 186px;
-   
+   padding-top: 3px;
+   padding-bottom: 26px;
 }
 button{
    height: 50px;
@@ -37,11 +36,13 @@ button{
    display: flex;
    justify-content: end;
    align-items: end;
+   
 }
 
 .container2 img {
    width: auto;
    height: auto;
+   
 }
 .imagepoke{
    width: 110px;
@@ -75,7 +76,7 @@ button{
 .buttonRightPokeBall{
    width: 250px;
    height: 80px;
-   margin-left: 1870px;
+   margin-left: 1786px;
 
 }
 .textoAtaque{
@@ -87,8 +88,9 @@ button{
   place-items: center;
   font-family: monospace;
   white-space: nowrap;
-  width: 96ch;
+  width: 96ch; 
   animation: escribiendo 2.5s steps(100);
+  max-width: 90ch;
   overflow: hidden;
  
 }
@@ -96,5 +98,5 @@ button{
 @keyframes escribiendo{
    from{
       width: 0;
-   }
+  }
 }
