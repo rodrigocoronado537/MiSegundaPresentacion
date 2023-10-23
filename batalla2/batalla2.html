@@ -33,12 +33,13 @@
         alt=""
         class="imagepoke3"
         id="pokeleft2"
+        style="filter: grayscale();"
         
       />
   
           <div class="p-2 col container2">
             <img
-              src="https://media.tenor.com/nz-j20tU4mMAAAAi/purugly-pokemon.gif"
+              src="../pokes.img/cubone.gif"
               class="rounded float-start"
               alt="..."
               style="width: 40rem"
@@ -99,16 +100,6 @@
        
        
       </div>
-
-      <div class="row text-center">
-        <div class="col" id="lifePokeLeft">
-          prueba1
-        </div>
-        <div class="col">
-          prueba2
-        </div>
-      </div>
-
       <div class="row">
         <div class="col" id="vidapokeimaginario2">
           <div
@@ -149,25 +140,25 @@
                 class="badge text-bg"
                 style="color: black"
                 id="GolpeCuerpo"
-                onclick="GolpeCuerpo(); "
+                onclick="GolpeCabeza(); "
               >
-                Golpe cuerpo
+                Golpe cabeza
               </button>
               <button
                 class="badge text-bg"
                 style="color: black"
                 id="Arremeter"
-                onclick="Arremeter(); "
+                onclick="Furia(); "
               >
-                Arremeter
+                Furia
               </button>
               <button
                 class="badge text-bg"
                 style="color: black"
                 id="CuchilladaGarra"
-                onclick="CuchilladaGarra();"
+                onclick="GolpeFilo();"
               >
-                Cuchillada Garra
+               Golpe filo
               </button>
               <button
                 class="badge text-bg"
@@ -175,7 +166,7 @@
                 id="Cuchillada"
                 onclick="Cuchillada();"
               >
-                Cuchillada
+                Hueso Palo
               </button>
              <link rel="stylesheet" href="../batalla2/batalla2.html" />
             </div>
@@ -225,8 +216,8 @@
     let poke = {
       vida: 100,
     };
-    let GolpeCuerpo = () => {
-      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo golpe cuerpo, no es efectivo </h1></div>'
+    let GolpeCabeza = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Cubone utilizo golpe cabeza </h1></div>'
       poke.vida = poke.vida - 10;
       document.getElementById("vidapokeimaginario").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
@@ -272,8 +263,8 @@
           '%"></div></div>';
       }
     };
-    let Arremeter = () => {
-      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo arremeter, no es efectivo </h1></div>'
+    let   Furia = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Cubone utilizo furia</h1></div>'
       poke.vida = poke.vida - 10;
       document.getElementById("vidapokeimaginario").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
@@ -318,8 +309,8 @@
           '%"></div></div>';
       }
     };
-    let CuchilladaGarra = () => {
-      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo cuchillada garra, es super efectivo </h1></div>'
+    let GolpeFilo = () => {
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Cubone utilizo Golpe Filo</h1></div>'
       poke.vida = poke.vida - 20;
       document.getElementById("vidapokeimaginario").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +
