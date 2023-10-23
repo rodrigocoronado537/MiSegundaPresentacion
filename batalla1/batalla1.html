@@ -17,12 +17,6 @@
       <div class="imagen">
         <div class="row">
           <img
-            src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
-            alt=""
-            class="imagepoke"
-            id="pokeleft"
-            
-          /> <img
           src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
           alt=""
           class="imagepoke3"
@@ -32,7 +26,7 @@
         src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
         alt=""
         class="imagepoke3"
-        id="pokeleft2"
+        id="pokeleft"
         
       />
   
@@ -52,12 +46,7 @@
               style="width: 36rem"
             />
           </div>
-          <img
-            src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
-            alt=""
-            class="imagepoke3"
-            id="pokeright2"
-          /><img
+            <img
           src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
           alt=""
           class="imagepoke3"
@@ -233,6 +222,7 @@
       document.getElementById("RoceEnvenenado").disabled = false;
       document.getElementById("Jalon").disabled = false;
       if (poke.vida <= 0) {
+        document.getElementById("pokeright2").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -280,6 +270,7 @@
       document.getElementById("RoceEnvenenado").disabled = false;
       document.getElementById("Jalon").disabled = false;
       if (poke.vida <= 0) {
+        document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -328,7 +319,8 @@
       // aqui va para q paresca el texto
       // alert de vida
       if (poke.vida <= 0) {
-        document.getElementById("pokeright").classList.add("imagepokeGray2");
+        document.getElementById("pokeright2").classList.add("imagepokeGray2");
+        document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -377,7 +369,8 @@
       // aqui va para q paresca el texto
       // alert de vida
       if (poke.vida <= 0) {
-        document.getElementById("pokeright").classList.add("imagepokeGray2");
+        document.getElementById("pokeright2").classList.add("imagepokeGray2");
+        document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -435,7 +428,7 @@
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
         document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+        document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -487,7 +480,7 @@
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
                document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+               document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -539,7 +532,7 @@
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
                document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+               document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -589,7 +582,7 @@
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
               document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+              document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;

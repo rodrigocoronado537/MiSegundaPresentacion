@@ -17,12 +17,6 @@
       <div class="imagen">
         <div class="row">
           <img
-            src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
-            alt=""
-            class="imagepoke"
-            id="pokeleft"
-            
-          /> <img
           src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
           alt=""
           class="imagepoke3"
@@ -52,18 +46,12 @@
               style="width: 40rem"
             />
           </div>
-          <img
-            src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
-            alt=""
-            class="imagepoke3"
-            id="pokeright2"
-            style="filter: grayscale();"
-        
-          /><img
+         <img
           src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
           alt=""
           class="imagepoke3"
           id="pokeright2"
+          style="filter: grayscale();"
         /><img
             src="https://i.pinimg.com/originals/1e/eb/8f/1eeb8fcfdbbbae6b392779718f5d7701.png"
             alt=""
@@ -141,25 +129,25 @@
                 class="badge text-bg"
                 style="color: black"
                 id="GolpeCuerpo"
-                onclick="GolpeCabeza(); "
+                onclick="GolpeCuerpo(); "
               >
-                Golpe cabeza
+                Golpe Cuerpo
               </button>
               <button
                 class="badge text-bg"
                 style="color: black"
                 id="Arremeter"
-                onclick="Furia(); "
+                onclick="Arremeter(); "
               >
-                Furia
+                Arremeter
               </button>
               <button
                 class="badge text-bg"
                 style="color: black"
                 id="CuchilladaGarra"
-                onclick="GolpeFilo();"
+                onclick="CuchilladaGarra();"
               >
-               Golpe filo
+               Cuchillada Garra 
               </button>
               <button
                 class="badge text-bg"
@@ -167,7 +155,7 @@
                 id="Cuchillada"
                 onclick="Cuchillada();"
               >
-                Hueso Palo
+                 Cuchillada
               </button>
              <link rel="stylesheet" href="../batalla2/batalla2.html" />
             </div>
@@ -178,33 +166,33 @@
                 class="badge text-bg"
                 style="color: black"
                 id="Perforador"
-                onclick="Perforador(); "
+                onclick="GolpeCabeza(); "
               >
-                Perforador
+                Golpe Cabeza
               </button>
               <button
                 class="badge text-bg"
                 style="color: black"
                 id="SacudidaCola"
-                onclick="SacudidaCola(); "
+                onclick="Furia(); "
               >
-                Sacudida cola
+                Furia
               </button>
               <button
                 class="badge text-bg"
                 style="color: black"
                 id="RoceEnvenenado"
-                onclick="RoceEnvenenado();"
+                onclick="GolpeFilo();"
               >
-                Roce envenenado
+              Golpe Filo
               </button>
               <button
                 class="badge text-bg"
                 style="color: black"
                 id="Jalon"
-                onclick="Jalon();"
+                onclick="HuesoPalo();"
               >
-                Jalon
+                Hueso Palo
               </button>
              
               
@@ -217,7 +205,7 @@
     let poke = {
       vida: 100,
     };
-    let GolpeCabeza = () => {
+    let GolpeCuerpo = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Cubone utilizo golpe cabeza </h1></div>'
       poke.vida = poke.vida - 10;
       document.getElementById("vidapokeimaginario").innerHTML =
@@ -264,7 +252,7 @@
           '%"></div></div>';
       }
     };
-    let   Furia = () => {
+    let Arremeter = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Cubone utilizo furia</h1></div>'
       poke.vida = poke.vida - 10;
       document.getElementById("vidapokeimaginario").innerHTML =
@@ -310,7 +298,7 @@
           '%"></div></div>';
       }
     };
-    let GolpeFilo = () => {
+    let CuchilladaGarra = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Cubone utilizo Golpe Filo</h1></div>'
       poke.vida = poke.vida - 20;
       document.getElementById("vidapokeimaginario").innerHTML =
@@ -412,7 +400,7 @@
     let poke2 = {
       vida: 100,
     };
-    let Perforador = () => {
+    let GolpeCabeza = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo perforador</h1></div>'
 
       poke2.vida = poke2.vida - 15;
@@ -465,7 +453,7 @@
           '%"></div></div>';
       }
     };
-    let SacudidaCola = () => {
+    let Furia = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo sacudida cola</h1></div>'
       poke2.vida = poke2.vida - 15;
       document.getElementById("vidapokeimaginario2").innerHTML =
@@ -518,7 +506,7 @@
       }
     };
 
-    let RoceEnvenenado = () => {
+    let GolpeFilo = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo roce envenenado, es super efectivo</h1></div>'
 
       poke2.vida = poke2.vida - 20;
@@ -569,7 +557,7 @@
           '%"></div></div>';
       }
     };
-    let Jalon = () => {
+    let HuesoPalo = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Nidoking utilizo jalon, no es efectivo</h1></div>'
       poke2.vida = poke2.vida - 10;
 
