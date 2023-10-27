@@ -78,6 +78,12 @@ button{
    margin-left: 1786px;
 
 }
+.proximaBatallaPurugly{
+   display: none;
+}
+.proximaBatallaNidokin{
+   display: none;
+}
 .textoAtaque{
    color: white;
    background-color: #945D31;

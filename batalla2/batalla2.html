@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="Batalla2.css" />
   </head>
   <body>
+    
     <section>
       <div class="imagen">
         <div class="row">
@@ -66,29 +67,20 @@
         </div>
 
         <div class="buttonLeftPokeball">
-           <div class="row">
+           <div class="row  ">
           <button
           onclick="document.location='../batalla3/batalla3.html'"
           id="Batalla2Pugly"
-          disabled
+          class="proximaBatalla"
+
+         
         >
-          proxima batalla pugly!!!
+          proxima batalla Cubone!!!
         </button>        
       </div>
 
         </div>
-        <div class="buttonRightPokeBall">
-           <div class="row">   
-          <button
-          onclick="document.location='../batalla3/batalla3.html'"
-          id="batalla2Nidoking"
-          disabled
-        >
-          proxima batalla nidoking!!
-        </button>
-        <link rel="stylesheet" href="batalla3/batalla3.html">
-      </div>
-        </div>
+
        
        
       </div>
@@ -155,8 +147,8 @@
               <button
                 class="badge text-bg"
                 style="color: black"
-                id="Cuchillada"
-                onclick="Cuchillada();"
+                id="Cuchillada" 
+                onclick="HuesoPalo();"
               >
                 Hueso Palo
               </button>
@@ -203,6 +195,11 @@
         
       </div>
     </section>
+    <div style="background-color: orangered;" id="felicitaciones" class="esconder">
+      <h1 class="text-center textoDeFelicitaciones">
+        Felicidades Nidoking has completado el juego!!
+      </h1>
+    </div>  
   </body>
   <script>
     let poke = {
@@ -228,6 +225,8 @@
       document.getElementById("RoceEnvenenado").disabled = false;
       document.getElementById("Jalon").disabled = false;
       if (poke.vida <= 0) {
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatalla")
+        document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -237,7 +236,7 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("Batalla2Pugly").disabled = false;
-       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
+       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Cubone!!</h1></div>'
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -274,6 +273,8 @@
       document.getElementById("RoceEnvenenado").disabled = false;
       document.getElementById("Jalon").disabled = false;
       if (poke.vida <= 0) {
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatalla")
+        document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -283,7 +284,7 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("Batalla2Pugly").disabled = false;
-        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Cubone!!</h1></div>'
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -322,7 +323,8 @@
       // aqui va para q paresca el texto
       // alert de vida
       if (poke.vida <= 0) {
-        document.getElementById("pokeright").classList.add("imagepokeGray2");
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatalla")
+        document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -332,7 +334,7 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("Batalla2Pugly").disabled = false;
-        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Cubone!!</h1></div>'
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -350,7 +352,7 @@
           '%"></div></div>';
       }
     };
-    let Cuchillada = () => {
+    let HuesoPalo = () => {
       document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo cuchillada, es super efectivo </h1></div>'
       poke.vida = poke.vida - 20;
       document.getElementById("vidapokeimaginario").innerHTML =
@@ -371,7 +373,8 @@
       // aqui va para q paresca el texto
       // alert de vida
       if (poke.vida <= 0) {
-        document.getElementById("pokeright").classList.add("imagepokeGray2");
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatalla")
+        document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -381,7 +384,7 @@
         document.getElementById("RoceEnvenenado").disabled = true;
         document.getElementById("Jalon").disabled = true;
         document.getElementById("Batalla2Pugly").disabled = false;
-        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Purugly!!</h1></div>'
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Cubone!!</h1></div>'
       } else if (poke.vida <= 55) {
         document.getElementById("vidapokeimaginario").innerHTML =
           '<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="' +
@@ -426,10 +429,11 @@
       // aqui va para q paresca el texto
       // alert de vida
 
-      if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
-        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
-
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+      if (poke2.vida <= 0) {
+        document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>';
+       
+        document.getElementById("felicitaciones").classList.remove("esconder");
+        document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -478,10 +482,11 @@
       // aqui va para q paresca el texto
       // alert de vida
 
-      if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
+      if (poke2.vida <= 0) {
                document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+               document.getElementById("felicitaciones").classList.remove("esconder");       
+        document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -530,10 +535,11 @@
       document.getElementById("RoceEnvenenado").disabled = true;
       document.getElementById("Jalon").disabled = true;
       // alert de vida
-      if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
+      if (poke2.vida <= 0) {
                document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+               document.getElementById("felicitaciones").classList.remove("esconder");
+               document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;
@@ -580,10 +586,11 @@
       document.getElementById("RoceEnvenenado").disabled = true;
       document.getElementById("Jalon").disabled = true;
       // alert de vida
-      if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
+      if (poke2.vida <= 0) {
               document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
-        document.getElementById("pokeleft").classList.add("imagepokeGray");
+              document.getElementById("felicitaciones").classList.remove("esconder");
+        document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
         document.getElementById("CuchilladaGarra").disabled = true;

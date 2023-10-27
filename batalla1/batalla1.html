@@ -65,7 +65,7 @@
           <button
           onclick="document.location='../batalla2/batalla2Pugly.html'"
           id="Batalla2Pugly"
-          disabled
+          class="proximaBatallaPurugly"
         >
           proxima batalla pugly!!! 
         </button>        
@@ -76,7 +76,7 @@
           <button
           onclick="document.location='../batalla2/Batalla2.html'"
           id="batalla2Nidoking"
-          disabled
+          class="proximaBatallaNidokin"
         >
           proxima batalla nidoking!!
         </button>
@@ -222,6 +222,7 @@
       document.getElementById("RoceEnvenenado").disabled = false;
       document.getElementById("Jalon").disabled = false;
       if (poke.vida <= 0) {
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatallaPurugly")
         document.getElementById("pokeright2").classList.add("imagepokeGray");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -270,6 +271,7 @@
       document.getElementById("RoceEnvenenado").disabled = false;
       document.getElementById("Jalon").disabled = false;
       if (poke.vida <= 0) {
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatallaPurugly")
         document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -319,6 +321,7 @@
       // aqui va para q paresca el texto
       // alert de vida
       if (poke.vida <= 0) {
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatallaPurugly")
         document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("GolpeCuerpo").disabled = true;
@@ -369,6 +372,7 @@
       // aqui va para q paresca el texto
       // alert de vida
       if (poke.vida <= 0) {
+        document.getElementById("Batalla2Pugly").classList.remove("proximaBatallaPurugly")
         document.getElementById("pokeright2").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("GolpeCuerpo").disabled = true;
@@ -427,7 +431,8 @@
 
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
         document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
-
+        
+        document.getElementById("batalla2Nidoking").classList.remove("proximaBatallaNidokin")
         document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -480,6 +485,7 @@
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
                document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
+               document.getElementById("batalla2Nidoking").classList.remove("proximaBatallaNidokin")
                document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -532,6 +538,7 @@
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
                document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
+               document.getElementById("batalla2Nidoking").classList.remove("proximaBatallaNidokin")
                document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;
@@ -582,6 +589,7 @@
       if (poke2.vida <= 0) {document.getElementById("batalla2Nidoking").disabled = false;
               document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">se acabo, gano Nidoking!!</h1></div>'
 
+              document.getElementById("batalla2Nidoking").classList.remove("proximaBatallaNidokin")
               document.getElementById("pokeleft").classList.add("imagepokeGray2");
         document.getElementById("GolpeCuerpo").disabled = true;
         document.getElementById("Arremeter").disabled = true;

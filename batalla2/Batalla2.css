@@ -74,17 +74,19 @@ button{
 }
 .buttonLeftPokeball{
    width: 260px;
-   height: 5px;
+   height: 80px;
    
    
    
 }
-.buttonRightPokeBall{
-   width: 265px;
-   height: 80px;
-   margin-left: 1700px;
-   
-
+.proximaBatalla{
+   display: none;
+}
+.textoDeFelicitaciones{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.esconder{
+   display: none;
 }
 .textoAtaque{
    color: white;
@@ -96,6 +98,7 @@ button{
   font-family: monospace;
   white-space: nowrap;
   width: 100ch;
+  max-width: 90ch;
   animation: escribiendo 2.5s steps(100);
   overflow: hidden;
  
