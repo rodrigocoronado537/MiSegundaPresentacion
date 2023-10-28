@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="Batalla2.css" />
   </head>
   <body>
-    
+    <audio autoplay loop src="../Canciones/pokemon-battle.mp3"></audio>
     <section>
       <div class="imagen">
         <div class="row">
@@ -71,11 +71,13 @@
           <button
           onclick="document.location='../batalla3/batalla3.html'"
           id="Batalla2Pugly"
-          class="proximaBatalla"
+          class="proximaBatalla "
 
          
         >
-          proxima batalla Cubone!!!
+          <h1 class="textoDeDesempate">
+            DESEMPATE
+          </h1>
         </button>        
       </div>
 
@@ -353,7 +355,7 @@
       }
     };
     let HuesoPalo = () => {
-      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">purugly utilizo cuchillada, es super efectivo </h1></div>'
+      document.getElementById("texto").innerHTML = '<div id="texto"><h1 class="textoAtaque ">Cubone utilizo hueso palo </h1></div>'
       poke.vida = poke.vida - 20;
       document.getElementById("vidapokeimaginario").innerHTML =
         '<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="' +

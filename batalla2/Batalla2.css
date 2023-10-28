@@ -73,14 +73,21 @@ button{
 
 }
 .buttonLeftPokeball{
-   width: 260px;
+   width: 2013px;
    height: 80px;
+   
    
    
    
 }
 .proximaBatalla{
    display: none;
+
+}
+.textoDeDesempate{
+   font-family: fantasy;
+   width: 2024px;
+   background-color: RED;
 }
 .textoDeFelicitaciones{
    font-family: Georgia, 'Times New Roman', Times, serif;
